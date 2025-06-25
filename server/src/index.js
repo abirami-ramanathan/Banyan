@@ -21,7 +21,10 @@ const limiter = rateLimit({
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: [
+  'http://localhost:3000',
+  'https://banyan-cvm8-b6mcrgvtj-abiramis-projects-923368ac.vercel.app'
+],
     credentials: true,
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization']
